@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "cyber-portfolio"
+version = "1.0.0"
+description = "FastAPI Portfolio"
+authors = ["Pragathi Srinivasan <pragathisrinivasan0208@gmail.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.14"
+fastapi = "^0.100.0"
+uvicorn = "^0.20.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
