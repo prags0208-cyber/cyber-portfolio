@@ -2,21 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
 
-app = FastAPI(
-    title="Pragathi Srinivasan | Portfolio API",
-    description="Interactive backend portfolio highlighting security frameworks, IAM engineering, and enterprise backend automation.",
-    version="1.0.0"
-)
-
-# --- SECURITY MIDDLEWARE ---
-@app.middleware("http")
-async def add_security_headers(request, call_next):
-    response = await call_next(request)
-    response.headers["X-XSS-Protection"] = "1; mode=block"
-    response.headers["X-Frame-Options"] = "DENY"
-    response.headers["X-Content-Type-Options"] = "nosniff"
-    response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
-    return response
+app = FastAPI(title="Pragathi Srinivasan | Cybersecurity Portfolio")
 
 app.add_middleware(
     CORSMiddleware,
@@ -26,96 +12,193 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# --- PORTFOLIO DATA TARGETING SECURITY, IAM, & BACKEND ---
-PROFILE = {
-    "name": "Pragathi Srinivasan",
-    "headline": "Research Project Assistant @ RF SUNY | MS Cybersecurity @ UAlbany | Ex-Software Engineer @ Bank of America",
-    "target_tracks": ["Security Engineer", "Identity & Access Management (IAM) Engineer", "Backend Developer"],
-    "location": "Albany, NY",
-    "contact": {"email": "pragathisrinivasan0208@gmail.com", "linkedin": "linkedin.com/in/pragathi-020801sp"}
-}
-
-SKILLS = [
-    {"category": "Security & IAM Engineering", "skills": ["OAuth 2.0", "Splunk SIEM", "Wireshark Traffic Analysis", "Incident Response", "Vulnerability Analysis", "GRC Concepts"]},
-    {"category": "Backend & Cloud Infrastructure", "skills": ["Java (Spring Boot)", "Python (Pandas, NumPy)", "SQL (PostgreSQL, CockroachDB)", "Kafka Event Services", "AWS", "Docker", "Kubernetes", "CI/CD (Jenkins, GitHub Actions)"]}
-]
-
-EXPERIENCE = [
-    {
-        "role": "Research Project Assistant",
-        "company": "The Research Foundation for State University of New York",
-        "duration": "March 2025 - Present",
-        "highlights": [
-            "Automated a manual HR intake workflow using JotForm and Microsoft Power Automate, reducing processing time from two weeks to 24 hours.",
-            "Digitalized legacy paper-based processes and designed backend automation workflows to improve data handling accuracy, process consistency, and audit readiness.",
-            "Authored technical documentation and business requirement documents to support standardized rollout and long-term maintainability."
-        ]
-    },
-    {
-        "role": "SOFTWARE ENGINEER-1B",
-        "company": "Bank of America - GBS",
-        "duration": "July 2023 - January 2025",
-        "highlights": [
-            "Implemented OAuth 2.0 authentication and authorization flows, strengthening application security and reducing access-related issues by 30%.",
-            "Developed real-time monitoring and health-check services using Java Spring Boot, improving platform observability and reducing error detection time by 40%.",
-            "Designed Kafka-based event-driven services to support real-time processing and improve throughput while reducing latency by 25%.",
-            "Created and optimized Splunk dashboards for system monitoring, log analysis, and operational reporting, reducing troubleshooting time by 40%.",
-            "Tuned SQL queries across PostgreSQL and CockroachDB, reducing execution time by 35% and improving backend responsiveness."
-        ]
-    }
-]
-
-PROJECTS = [
-    {
-        "title": "Enron Email Behavioral Analysis & Insider Threat Detection",
-        "type": "Digital Forensics & Machine Learning",
-        "description": "Engineered a forensic pipeline to identify communication anomalies; utilized feature engineering for sentiment volatility and time-based clustering. Developed a Logistic Regression model to classify suspicious activity through behavioral signals."
-    },
-    {
-        "title": "Apex Financial Web Server Breach - Forensic Investigation",
-        "type": "Incident Response & Traffic Analysis",
-        "description": "Conducted vulnerability scanning, log analysis, and incident review to identify system weaknesses. Built reports with Splunk dashboards and Wireshark traffic analysis, supporting compliance and audit requirements."
-    }
-]
-
-RECOMMENDATIONS = [
-    {
-        "from": "Senior Software Engineer / Tech Lead (Bank of America)",
-        "relationship": "Supervised Pragathi directly",
-        "text": "Pragathi brings an incredible blend of backend development performance and application security awareness. Her implementation of OAuth 2.0 flows significantly minimized unauthorized structural vectors, and she optimizes databases masterfully."
-    },
-    {
-        "from": "Operations Lead (Research Foundation for SUNY)",
-        "relationship": "Managed Pragathi's automation tasks",
-        "text": "Pragathi took absolute ownership of our legacy intake channels. By coding custom automated handlers, she brought our operations timeline down from weeks to under 24 hours. Her systems are safe, efficient, and exceptionally documented."
-    }
-]
-
 @app.get("/")
 def home():
-    return HTMLResponse(content="""
-    <html>
-        <head><title>Pragathi Srinivasan | Portfolio API</title></head>
-        <body style="font-family: sans-serif; text-align: center; padding-top: 100px; background-color: #f4f6f9;">
-            <h1 style="color: #1E3A8A;">🛡️ Pragathi Srinivasan's Cybersecurity & Backend Portfolio API</h1>
-            <p style="color: #4B5563;">Asynchronous API architecture built with FastAPI</p>
-            <br>
-            <a href="/docs" style="background-color: #2563EB; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">Explore & Interact with My Profile via Swagger UI</a>
-        </body>
+    html_content = """
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pragathi Srinivasan | Cybersecurity & Core Infrastructure Portfolio</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body class="bg-slate-950 text-slate-100 font-sans selection:bg-teal-500 selection:text-slate-950">
+
+        <!-- SECURITY TOP TELEMETRY BAR -->
+        <div class="bg-slate-900 border-b border-slate-800 px-6 py-2 text-xs text-slate-400 flex flex-wrap justify-between items-center gap-2 cursor-default">
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1.5 font-mono"><span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span> PORTFOLIO STATUS: SECURE</span>
+                <span class="hidden sm:inline text-slate-600">|</span>
+                <span class="hidden sm:inline font-mono">FRAMEWORK: FASTAPI ASYNC ENGINE</span>
+            </div>
+            <div class="font-mono text-slate-500 text-right">
+                LOCATION: ALBANY, NY // ID: PRAGATHI_SRINIVASAN
+            </div>
+        </div>
+
+        <!-- MAIN COMMAND CENTER HERO -->
+        <header class="border-b border-slate-800 bg-slate-900/40 py-16 px-6 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#0284c7_1px,transparent_1px),linear-gradient(to_bottom,#0284c7_1px,transparent_1px)] [background-size:24px_24px]"></div>
+            <div class="max-w-5xl mx-auto relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-teal-500/10 border border-teal-500/20 text-teal-400 text-xs font-mono px-3 py-1 rounded mb-4 tracking-wider uppercase">
+                        <i class="fa-solid fa-shield-halved"></i> Digital Trust & Threat Mitigation
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white font-mono">Pragathi Srinivasan</h1>
+                    <p class="text-md md:text-lg text-slate-400 mt-3 max-w-2xl leading-relaxed">
+                        Research Project Assistant @ RF SUNY <span class="text-slate-600">|</span> MS Cybersecurity @ UAlbany <span class="text-slate-600">|</span> Former Enterprise Engineer @ Bank of America
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row md:flex-col gap-3 w-full md:w-auto text-xs font-mono">
+                    <a href="mailto:pragathisrinivasan0208@gmail.com" class="flex items-center gap-2 justify-center bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 px-4 py-2.5 rounded transition shadow-sm"><i class="fa-solid fa-envelope text-teal-400"></i> email</a>
+                    <a href="https://linkedin.com/in/pragathi-020801sp" target="_blank" class="flex items-center gap-2 justify-center bg-slate-900 border border-slate-800 hover:border-teal-500/40 text-slate-300 px-4 py-2.5 rounded transition shadow-sm group"><i class="fa-brands fa-linkedin text-teal-400 group-hover:scale-105 transition"></i> linkedin_profile</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="max-w-5xl mx-auto px-6 py-16 space-y-16">
+
+            <!-- CORE TARGET ROLES AREA -->
+            <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-900/60 p-6 rounded-lg border border-slate-800 hover:border-slate-700 transition">
+                    <div class="text-teal-400 font-mono text-xs mb-2 tracking-wider flex items-center justify-between">
+                        <span>TRACK_01</span> <i class="fa-solid fa-circle-nodes"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white font-mono mb-2">Security Engineering</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Remediating software vulnerabilities, implementing system configuration baselines, managing SIEM pipelines, and analyzing raw packet traffic captures.</p>
+                </div>
+                <div class="bg-slate-900/60 p-6 rounded-lg border border-slate-800 hover:border-slate-700 transition">
+                    <div class="text-sky-400 font-mono text-xs mb-2 tracking-wider flex items-center justify-between">
+                        <span>TRACK_02</span> <i class="fa-solid fa-fingerprint"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white font-mono mb-2">IAM Architecture</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Securing authentication vectors, token verification, managing federated protocols, and deploying secure OAuth 2.0 runtime models.</p>
+                </div>
+                <div class="bg-slate-900/60 p-6 rounded-lg border border-slate-800 hover:border-slate-700 transition">
+                    <div class="text-purple-400 font-mono text-xs mb-2 tracking-wider flex items-center justify-between">
+                        <span>TRACK_03</span> <i class="fa-solid fa-terminal"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white font-mono mb-2">Secure Backend Dev</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Building resilient, low-latency API logic, high-throughput message consumer pipelines, and optimizing high-availability structural database queries.</p>
+                </div>
+            </section>
+
+            <!-- INFRASTRUCTURE & TOOLS MATRIX -->
+            <section class="bg-slate-900/40 border border-slate-800/80 p-8 rounded-xl">
+                <h2 class="text-xl font-bold text-white font-mono mb-6 flex items-center gap-2"><i class="fa-solid fa-microchip text-teal-400"></i> SECURITY ENGINE & TOOL INVENTORY</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-xs font-mono font-bold uppercase tracking-widest text-slate-500 mb-3">// Security Controls & Monitoring</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-900 text-slate-300 font-mono text-xs px-3 py-1.5 rounded border border-slate-800">OAuth 2.0 Architecture</span>
+                            <span class="bg-slate-900 text-slate-300 font-mono text-xs px-3 py-1.5 rounded border border-slate-800">Splunk SIEM Core</span>
+                            <span class="bg-slate-900 text-slate-300 font-mono text-xs px-3 py-1.5 rounded border border-slate-800">Wireshark Traffic Analysis</span>
+                            <span class="bg-slate-900 text-slate-300 font-mono text-xs px-3 py-1.5 rounded border border-slate-800">Incident Mitigation</span>
+                            <span class="bg-slate-900 text-slate-300 font-mono text-xs px-3 py-1.5 rounded border border-slate-800">Vulnerability Analysis</span>
+                            <span class="bg-slate-900 text-slate-300 font-mono text-xs px-3 py-1.5 rounded border border-slate-800">GRC Risk Frameworks</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-mono font-bold uppercase tracking-widest text-slate-500 mb-3">// Backend & Systems Automation</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-900 text-slate-300 font-mono text-xs px-3 py-1.5 rounded border border-slate-800">Java (Spring Boot)</span>
+                            <span class="bg-slate-900 text-slate-300 font-mono text-xs px-3 py-1.5 rounded border border-slate-800">Python (Pandas, NumPy, Scikit)</span>
+                            <span class="bg-slate-900 text-slate-300 font-mono text-xs px-3 py-1.5 rounded border border-slate-800">SQL (PostgreSQL, CockroachDB)</span>
+                            <span class="bg-slate-900 text-slate-300 font-mono text-xs px-3 py-1.5 rounded border border-slate-800">Kafka Data Streaming</span>
+                            <span class="bg-slate-900 text-slate-300 font-mono text-xs px-3 py-1.5 rounded border border-slate-800">AWS Cloud, Docker, K8s</span>
+                            <span class="bg-slate-900 text-slate-300 font-mono text-xs px-3 py-1.5 rounded border border-slate-800">Secure CI/CD Pipelines</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 pt-6 border-t border-slate-800/60 flex flex-wrap gap-6 text-xs text-slate-400 font-mono">
+                    <span><i class="fa-solid fa-certificate text-teal-400 mr-1.5"></i> Google Cybersecurity Certified</span>
+                    <span><i class="fa-solid fa-certificate text-teal-400 mr-1.5"></i> IBM Cybersecurity Compliance Certified</span>
+                </div>
+            </section>
+
+            <!-- PROFESSIONAL AUDIT HISTORY -->
+            <section class="space-y-6">
+                <h2 class="text-xl font-bold text-white font-mono flex items-center gap-2"><i class="fa-solid fa-list-check text-teal-400"></i> EXPERIENCE LOGS</h2>
+                
+                <!-- JOB 1 -->
+                <div class="bg-slate-900/40 p-6 md:p-8 rounded-xl border border-slate-800 relative group hover:border-slate-700 transition">
+                    <div class="flex flex-wrap justify-between items-start gap-2 mb-4">
+                        <div>
+                            <h3 class="text-lg font-bold text-white font-mono">Research Project Assistant</h3>
+                            <p class="text-sm font-medium text-teal-400 mt-0.5">The Research Foundation for State University of New York (RF SUNY)</p>
+                        </div>
+                        <span class="bg-slate-900 text-slate-400 font-mono text-xs px-2.5 py-1 rounded border border-slate-800">2025 - PRESENT</span>
+                    </div>
+                    <ul class="space-y-3 text-slate-400 text-xs font-mono list-none pl-0">
+                        <li class="flex items-start gap-2"><span class="text-teal-400 font-bold">&gt;</span> <span>Automated manual enterprise intake routines with JotForm and Microsoft Power Automate, eliminating operational bottlenecks and lowering processing latency from 2 weeks down to under 24 hours.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-teal-400 font-bold">&gt;</span> <span>Digitized legacy system architectures and structured programmatic audit-ready controls to support long-term data governance criteria.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-teal-400 font-bold">&gt;</span> <span>Authored strict Business Requirement Documents (BRDs) and system integration playbooks to maintain standardized process rollouts.</span></li>
+                    </ul>
+                </div>
+
+                <!-- JOB 2 -->
+                <div class="bg-slate-900/40 p-6 md:p-8 rounded-xl border border-slate-800 relative group hover:border-slate-700 transition">
+                    <div class="flex flex-wrap justify-between items-start gap-2 mb-4">
+                        <div>
+                            <h3 class="text-lg font-bold text-white font-mono">Software Engineer - 1B</h3>
+                            <p class="text-sm font-medium text-slate-400 mt-0.5">Bank of America - GBS</p>
+                        </div>
+                        <span class="bg-slate-900 text-slate-400 font-mono text-xs px-2.5 py-1 rounded border border-slate-800">2023 - 2025</span>
+                    </div>
+                    <ul class="space-y-3 text-slate-400 text-xs font-mono list-none pl-0">
+                        <li class="flex items-start gap-2"><span class="text-slate-500 font-bold">&gt;</span> <span>Deployed core OAuth 2.0 authentication and identity authorization configurations, reducing structural authorization issues across platforms by 30%.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-slate-500 font-bold">&gt;</span> <span>Built telemetry trackers and automated system health hooks with Java Spring Boot, increasing observability metrics and cutting error localization times by 40%.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-slate-500 font-bold">&gt;</span> <span>Engineered Kafka data loops and optimized heavy query processing indices inside PostgreSQL/CockroachDB architectures to streamline high-throughput platforms.</span></li>
+                        <li class="flex items-start gap-2"><span class="text-slate-500 font-bold">&gt;</span> <span>Constructed tailored Splunk dashboards for real-time log monitoring, forensic discovery, and production troubleshooting mitigation.</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- FORENSIC INVESTIGATIONS SECTION -->
+            <section class="space-y-6">
+                <h2 class="text-xl font-bold text-white font-mono flex items-center gap-2"><i class="fa-solid fa-folder-open text-teal-400"></i> FORENSIC RESEARCH & DEPLOYED REPOS</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-slate-900/30 border border-slate-800 p-6 rounded-lg">
+                        <span class="font-mono text-[10px] uppercase text-teal-400 bg-teal-500/10 px-2 py-0.5 rounded tracking-widest">DATA_FORENSICS // ML</span>
+                        <h4 class="font-bold text-white font-mono text-base mt-3">Enron Email Behavioral Insider Threat Pipeline</h4>
+                        <p class="text-slate-400 text-xs mt-2 leading-relaxed">Engineered a data forensic ingestion pipeline designed to extract anomalies from corpus text records. Mapped behavioral signals via sentiment variance indicators and clustering models, leveraging a Logistic Regression engine to isolate anomalous access trajectories.</p>
+                    </div>
+                    <div class="bg-slate-900/30 border border-slate-800 p-6 rounded-lg">
+                        <span class="font-mono text-[10px] uppercase text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded tracking-widest">INCIDENT_RESPONSE // SIEM</span>
+                        <h4 class="font-bold text-white font-mono text-base mt-3">Apex Financial Server Breach Investigation</h4>
+                        <p class="text-slate-400 text-xs mt-2 leading-relaxed">Conducted deep parsing of adversarial network intrusion signatures by sorting capture telemetry inside Wireshark. Aggregated host system events into actionable Splunk tracking interfaces to build audit records map paths.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LINKEDIN RECOMMENDATIONS VERBATIM -->
+            <section class="space-y-6">
+                <h2 class="text-xl font-bold text-white font-mono flex items-center gap-2"><i class="fa-solid fa-award text-teal-400"></i> VERIFIED PROFESSIONAL ENDORSEMENTS</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-slate-900/50 border border-slate-800/60 p-6 rounded-xl relative">
+                        <p class="text-xs text-slate-400 italic font-mono leading-relaxed">
+                            "Pragathi brings an incredible blend of backend development performance and application security awareness. Her implementation of OAuth 2.0 flows significantly minimized unauthorized structural vectors, and she optimizes databases masterfully."
+                        </p>
+                        <h5 class="text-[10px] font-mono text-teal-400 mt-4 text-right">— Senior Software Engineer / Tech Lead, Bank of America</h5>
+                    </div>
+                    <div class="bg-slate-900/50 border border-slate-800/60 p-6 rounded-xl relative">
+                        <p class="text-xs text-slate-400 italic font-mono leading-relaxed">
+                            "Pragathi took absolute ownership of our legacy intake channels. By coding custom automated handlers, she brought our operations timeline down from weeks to under 24 hours. Her systems are safe, efficient, and exceptionally documented."
+                        </p>
+                        <h5 class="text-[10px] font-mono text-teal-400 mt-4 text-right">— Operations Lead, Research Foundation for SUNY</h5>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="bg-slate-900/60 text-slate-600 text-[10px] font-mono py-8 text-center border-t border-slate-900 mt-12">
+            <p>© 2026 PRAGATHI_SRINIVASAN // ARCHITECTURE RUNNING ON SECURED FASTAPI ENGINE</p>
+        </footer>
+
+    </body>
     </html>
-    """)
-
-@app.get("/api/profile")
-def get_profile(): return PROFILE
-
-@app.get("/api/skills")
-def get_skills(): return SKILLS
-
-@app.get("/api/experience")
-def get_experience(): return EXPERIENCE
-
-@app.get("/api/projects")
-def get_projects(): return PROJECTS
-
-@app.get("/api/recommendations")
-def get_recommendations(): return RECOMMENDATIONS
+    """
+    return HTMLResponse(content=html_content, status_code=200)
