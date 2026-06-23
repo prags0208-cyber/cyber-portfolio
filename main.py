@@ -173,22 +173,60 @@ def home():
                 </div>
             </section>
 
-            <!-- LINKEDIN RECOMMENDATIONS VERBATIM -->
-            <section class="space-y-6">
+          <section class="space-y-6">
                 <h2 class="text-xl font-bold text-white font-mono flex items-center gap-2"><i class="fa-solid fa-award text-teal-400"></i> VERIFIED PROFESSIONAL ENDORSEMENTS</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-slate-900/50 border border-slate-800/60 p-6 rounded-xl relative">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <div class="bg-slate-900/50 border border-slate-800/60 p-6 rounded-xl flex flex-col justify-between">
                         <p class="text-xs text-slate-400 italic font-mono leading-relaxed">
-                            "Pragathi brings an incredible blend of backend development performance and application security awareness. Her implementation of OAuth 2.0 flows significantly minimized unauthorized structural vectors, and she optimizes databases masterfully."
+                            "I worked with Pragati on an GTS project while collaborating between GTS and the Bank of America EDPAS team. She has strong technical expertise in Java, SQL, Python, and banking domain, a clear understanding of requirements, and excellent communication. Despite limited experience, she demonstrated strong analytical skills, attention to detail, and a mature problem-solving approach. I highly recommend her for technical data and development focused roles."
                         </p>
-                        <h5 class="text-[10px] font-mono text-teal-400 mt-4 text-right">— Senior Software Engineer / Tech Lead, Bank of America</h5>
+                        <div class="mt-4 pt-4 border-t border-slate-800/50 text-right">
+                            <h5 class="text-[11px] font-mono text-teal-400 font-bold">Tarun Bonam</h5>
+                            <p class="text-[9px] font-mono text-slate-500">Engineer II Software Development @ S&P Global</p>
+                        </div>
                     </div>
-                    <div class="bg-slate-900/50 border border-slate-800/60 p-6 rounded-xl relative">
+
+                    <div class="bg-slate-900/50 border border-slate-800/60 p-6 rounded-xl flex flex-col justify-between">
                         <p class="text-xs text-slate-400 italic font-mono leading-relaxed">
-                            "Pragathi took absolute ownership of our legacy intake channels. By coding custom automated handlers, she brought our operations timeline down from weeks to under 24 hours. Her systems are safe, efficient, and exceptionally documented."
+                            "Pragathi is extremely professional and strives to give her best at anything she does. She is a great team player and is an asset to any team that she is a part of. I wish her the best!"
                         </p>
-                        <h5 class="text-[10px] font-mono text-teal-400 mt-4 text-right">— Operations Lead, Research Foundation for SUNY</h5>
+                        <div class="mt-4 pt-4 border-t border-slate-800/50 text-right">
+                            <h5 class="text-[11px] font-mono text-teal-400 font-bold">Nathamayil Natesh</h5>
+                            <p class="text-[9px] font-mono text-slate-500">Software Engineer @ Bank of America | App Security</p>
+                        </div>
                     </div>
+
+                    <div class="bg-slate-900/50 border border-slate-800/60 p-6 rounded-xl flex flex-col justify-between">
+                        <p class="text-xs text-slate-400 italic font-mono leading-relaxed">
+                            "Pragathi is a great colleague and team player who is professional, reliable, and easy to work with. She is dependable, committed to her work, and always supportive of the team. Her ability to collaborate effectively and handle responsibilities with dedication makes her a valuable person to work with."
+                        </p>
+                        <div class="mt-4 pt-4 border-t border-slate-800/50 text-right">
+                            <h5 class="text-[11px] font-mono text-teal-400 font-bold">Neha Rathod</h5>
+                            <p class="text-[9px] font-mono text-slate-500">Software Engineer @ Bank of America</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/50 border border-slate-800/60 p-6 rounded-xl flex flex-col justify-between">
+                        <p class="text-xs text-slate-400 italic font-mono leading-relaxed">
+                            "Pragathi is a good team player and positive person. She is extremely professional and committed to her work. Her passion towards her assignments was commendable."
+                        </p>
+                        <div class="mt-4 pt-4 border-t border-slate-800/50 text-right">
+                            <h5 class="text-[11px] font-mono text-teal-400 font-bold">Vinitha R</h5>
+                            <p class="text-[9px] font-mono text-slate-500">Software Engineer @ Bank of America (Mentor)</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/50 border border-slate-800/60 p-6 rounded-xl flex flex-col justify-between md:col-span-2 lg:col-span-1">
+                        <p class="text-xs text-slate-400 italic font-mono leading-relaxed">
+                            "I have known Pragathi since the past 4 years and have done more than 5 projects together. She's extremely talented and punctual. Pragathi can work as both team leader and a team member. She has a lot of knowledge on programming languages like Python and Java... She is very creative and is enthusiastic."
+                        </p>
+                        <div class="mt-4 pt-4 border-t border-slate-800/50 text-right">
+                            <h5 class="text-[11px] font-mono text-teal-400 font-bold">Lakshmi Sravya D</h5>
+                            <p class="text-[9px] font-mono text-slate-500">Site Reliability Engineer | Associate</p>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
