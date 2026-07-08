@@ -31,7 +31,6 @@ def home():
             <div class="flex items-center gap-4">
                 <span class="flex items-center gap-1.5 font-mono"><span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span> PORTFOLIO STATUS: SECURE</span>
                 <span class="hidden sm:inline text-slate-600">|</span>
-                <span class="hidden sm:inline font-mono">FRAMEWORK: FASTAPI ASYNC ENGINE</span>
             </div>
             <div class="font-mono text-slate-500 text-right">
                 LOCATION: ALBANY, NY // ID: PRAGATHI_SRINIVASAN
@@ -48,7 +47,7 @@ def home():
                     </div>
                     <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white font-mono">Pragathi Srinivasan</h1>
                     <p class="text-md md:text-lg text-slate-400 mt-3 max-w-2xl leading-relaxed">
-                        MS Cybersecurity @ UAlbany <span class="text-slate-600">|</span> Research Project Assistant @ RF SUNY <span class="text-slate-600">|</span> Former Enterprise Engineer @ Bank of America
+                        MS Cybersecurity @ UAlbany <span class="text-slate-600">|</span> Research Project Assistant @ RF SUNY <span class="text-slate-600">|</span> Former Software  Engineer @ Bank of America
                     </p>
                 </div>
                 <div class="flex flex-col sm:flex-row md:flex-col gap-3 w-full md:w-auto text-xs font-mono">
@@ -63,7 +62,7 @@ def home():
             <!-- PROFESSIONAL NARRATIVE & FIT PARAGRAPH -->
             <section class="bg-slate-900/60 p-8 rounded-xl border border-slate-800 hover:border-slate-700 transition space-y-4">
                 <h2 class="text-xl font-bold text-white font-mono flex items-center gap-2">
-                    <i class="fa-solid fa-user-shield text-teal-400"></i> ABOUT MY WORK & TARGET ROLES
+                    <i class="fa-solid fa-user-shield text-teal-400"></i> ABOUT MYSELF
                 </h2>
                 <p class="text-sm text-slate-300 leading-relaxed">
                     I am a Cybersecurity Graduate Student at the University at Albany with a strong foundation in enterprise systems engineering from my tenure as a Software Engineer at Bank of America. My work bridges the gap between software development, access management, and security operations—building infrastructure that is resilient by design rather than retrofitted after deployment.
