@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
 
-app = FastAPI(title="Pragathi Srinivasan | Technical GRC & Security Engineering Portfolio")
+app = FastAPI(title="Pragathi Srinivasan | Portfolio")
 
 app.add_middleware(
     CORSMiddleware,
@@ -20,12 +20,13 @@ def home():
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pragathi Srinivasan | Technical GRC & Security Engineering HUD</title>
+        <title>Pragathi Srinivasan </title>
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
     <body class="bg-slate-950 text-slate-100 font-sans selection:bg-teal-500 selection:text-slate-950">
 
+        <!-- HEADER / NAVIGATION -->
         <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80 px-6 py-3">
             <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-4">
                 <div class="flex items-center gap-3">
@@ -33,7 +34,7 @@ def home():
                       <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
                       <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-teal-500"></span>
                     </span>
-                    <span class="font-mono text-xs font-bold text-slate-300 tracking-wider">PRAGATHI_SRINIVASAN // TECH_GRC_&_SEC_ENG</span>
+                    <span class="font-mono text-xs font-bold text-slate-300 tracking-wider">PRAGATHI_SRINIVASAN/span>
                 </div>
                 <nav class="flex items-center gap-6 font-mono text-xs text-slate-400">
                     <a href="#about" class="hover:text-teal-400 transition">// 01. ABOUT</a>
@@ -45,6 +46,7 @@ def home():
             </div>
         </header>
 
+        <!-- HERO / COMMAND BAR -->
         <section class="border-b border-slate-800 bg-gradient-to-b from-slate-900/50 to-slate-950 py-20 px-6 relative overflow-hidden">
             <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#0ea5e9_1px,transparent_1px)] [background-size:16px_16px]"></div>
             <div class="max-w-6xl mx-auto relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
@@ -54,7 +56,7 @@ def home():
                     </div>
                     <h1 class="text-4xl sm:text-5xl font-black tracking-tight text-white font-mono">Pragathi Srinivasan</h1>
                     <p class="text-base md:text-lg text-slate-400 mt-3 max-w-2xl leading-relaxed">
-                        MS Cybersecurity @ UAlbany <span class="text-slate-700">|</span> GRC & Automation Assistant @ RF SUNY <span class="text-slate-700">|</span> Former Software Engineer @ Bank of America
+                        MS Cybersecurity @ UAlbany (GPA 3.8/4.0) <span class="text-slate-700">|</span> Research Project Assistant @ RF SUNY <span class="text-slate-700">|</span> Former Software Engineer @ Bank of America
                     </p>
                 </div>
 
@@ -75,33 +77,40 @@ def home():
 
         <main class="max-w-6xl mx-auto px-6 py-16 space-y-24">
 
+            <!-- 01. PROFILE & OBJECTIVE -->
             <section id="about" class="scroll-mt-20">
                 <div class="flex items-center gap-3 font-mono text-xs text-teal-400 mb-2 uppercase tracking-widest">
                     <span>01</span> <span class="h-px bg-teal-500/30 flex-grow"></span> <span>PROFILE & OBJECTIVE</span>
                 </div>
-                <h2 class="text-2xl font-bold text-white font-mono mb-6">Bridging Engineering, Risk Governance, and Automation</h2>
+                <h2 class="text-2xl font-bold text-white font-mono mb-6">Unifying Software Engineering, Security Engineering, Tech GRC & Data Analytics</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="md:col-span-2 bg-slate-900/40 border border-slate-800 p-8 rounded-2xl relative">
                         <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                            I am a Cybersecurity Graduate Student at the University at Albany with a solid corporate foundation as a former Software Engineer at Bank of America. My expertise lies at the intersection of complex systems engineering and strict security frameworks—engineering automated pipelines to remediate technical risk, streamline continuous compliance evidence gathering, and safeguard mission-critical organizational assets.
+                            I am a Cybersecurity Graduate Student at the University at Albany (GPA 3.8/4.0) with a proven enterprise foundation as a former Software Engineer at Bank of America. My expertise bridges full-stack backend development, security engineering (IAM, OAuth 2.0, Zero-Trust boundaries), technical GRC automation (NIST CSF, ISO 27001, HIPAA), cloud security, and data analytics—building secure, automated, and audit-ready systems.
                         </p>
                         <p class="text-slate-300 text-sm leading-relaxed">
-                            I specialize in technical GRC: translating rigorous regulatory controls (NIST CSF, ISO 27001, HIPAA) into deterministic, programmatic workflows. From designing custom Python tools to audit extensive data stores, to engineering custom Power Automate systems that slash process latency from weeks to hours, I build infrastructure that handles risk management and audit-readiness by design. I am actively seeking <strong class="text-teal-400 font-normal">Technical GRC</strong>, <strong class="text-teal-400 font-normal">Security Engineering</strong>, and <strong class="text-teal-400 font-normal">Cloud Compliance</strong> positions.
+                            From architecting high-throughput Java Spring Boot APIs and auditing distributed transaction stores to designing automated compliance evidence pipelines and ML-driven fraud detection models, I solve complex technical challenges across the full system lifecycle. I am actively seeking positions in <strong class="text-teal-400 font-normal">Security Engineering</strong>, <strong class="text-teal-400 font-normal">Technical GRC</strong>, <strong class="text-teal-400 font-normal">Software Engineering</strong>, <strong class="text-teal-400 font-normal">IAM & Cloud Security</strong>, and <strong class="text-teal-400 font-normal">Risk & Data Analytics</strong>.
                         </p>
                     </div>
 
                     <div class="bg-slate-900/70 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between space-y-4">
-                        <div class="font-mono text-xs text-slate-400 uppercase tracking-wider">// TARGET FOCUS</div>
-                        <div class="space-y-3 font-mono text-xs">
-                            <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 flex items-center gap-3 text-teal-300">
-                                <i class="fa-solid fa-shield-halved text-teal-400 text-base"></i> Technical GRC & Audit
+                        <div class="font-mono text-xs text-slate-400 uppercase tracking-wider">// CORE PILLARS</div>
+                        <div class="space-y-2 font-mono text-xs">
+                            <div class="bg-slate-950 p-2 rounded-lg border border-slate-800 flex items-center gap-2.5 text-teal-300">
+                                <i class="fa-solid fa-shield-halved text-teal-400 text-sm"></i> Security Engineering & IAM
                             </div>
-                            <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 flex items-center gap-3 text-sky-300">
-                                <i class="fa-solid fa-gears text-sky-400 text-base"></i> Compliance Automation
+                            <div class="bg-slate-950 p-2 rounded-lg border border-slate-800 flex items-center gap-2.5 text-sky-300">
+                                <i class="fa-solid fa-clipboard-check text-sky-400 text-sm"></i> Technical GRC & Compliance
                             </div>
-                            <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 flex items-center gap-3 text-purple-300">
-                                <i class="fa-solid fa-fingerprint text-purple-400 text-base"></i> Identity & Access Governance
+                            <div class="bg-slate-950 p-2 rounded-lg border border-slate-800 flex items-center gap-2.5 text-emerald-300">
+                                <i class="fa-solid fa-code text-emerald-400 text-sm"></i> Software Engineering & APIs
+                            </div>
+                            <div class="bg-slate-950 p-2 rounded-lg border border-slate-800 flex items-center gap-2.5 text-purple-300">
+                                <i class="fa-solid fa-chart-line text-purple-400 text-sm"></i> Risk, Fraud & Data Analytics
+                            </div>
+                            <div class="bg-slate-950 p-2 rounded-lg border border-slate-800 flex items-center gap-2.5 text-amber-300">
+                                <i class="fa-solid fa-cloud text-amber-400 text-sm"></i> Cloud Sec & AI Infrastructures
                             </div>
                         </div>
                         <div class="text-[10px] text-slate-500 font-mono">
@@ -111,78 +120,85 @@ def home():
                 </div>
             </section>
 
+            <!-- 02. TECHNICAL INVENTORY -->
             <section id="skills" class="scroll-mt-20">
                 <div class="flex items-center gap-3 font-mono text-xs text-teal-400 mb-2 uppercase tracking-widest">
-                    <span>02</span> <span class="h-px bg-teal-500/30 flex-grow"></span> <span>COMPLIANCE & TECHNICAL CAPABILITIES</span>
+                    <span>02</span> <span class="h-px bg-teal-500/30 flex-grow"></span> <span>ENGINEERING & TECHNICAL CAPABILITIES</span>
                 </div>
                 <h2 class="text-2xl font-bold text-white font-mono mb-8">Technical Inventory</h2>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Column 1 -->
                     <div class="bg-slate-900/40 border border-slate-800/80 p-6 rounded-xl hover:border-slate-700 transition">
-                        <div class="text-teal-400 text-xl mb-3"><i class="fa-solid fa-clipboard-check"></i></div>
-                        <h3 class="font-mono font-bold text-sm text-white mb-3">Governance & Risk</h3>
+                        <div class="text-teal-400 text-xl mb-3"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3 class="font-mono font-bold text-sm text-white mb-3">Security & IAM Engineering</h3>
                         <ul class="space-y-2 font-mono text-xs text-slate-400">
-                            <li>• NIST CSF & RMF Lifecycle</li>
+                            <li>• OAuth 2.0 & OIDC Auth Systems</li>
+                            <li>• Access Controls & Isolation</li>
+                            <li>• Cryptographic Cert-Swaps</li>
+                            <li>• Zero-Trust Access Rules</li>
+                            <li>• Identity Lifecycle Management</li>
+                            <li>• SIEM Alerting & Monitoring</li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="bg-slate-900/40 border border-slate-800/80 p-6 rounded-xl hover:border-slate-700 transition">
+                        <div class="text-sky-400 text-xl mb-3"><i class="fa-solid fa-clipboard-check"></i></div>
+                        <h3 class="font-mono font-bold text-sm text-white mb-3">Technical GRC & Risk</h3>
+                        <ul class="space-y-2 font-mono text-xs text-slate-400">
+                            <li>• NIST CSF & RMF Frameworks</li>
                             <li>• ISO/IEC 27001 Implementation</li>
-                            <li>• HIPAA/HITECH Data Controls</li>
-                            <li>• CIS Controls & Audit Mapping</li>
-                            <li>• Internal Controls Evaluation</li>
-                            <li>• Continuous Evidence Gathering</li>
+                            <li>• HIPAA/HITECH Data Protection</li>
+                            <li>• CIS Benchmark Mapping</li>
+                            <li>• Evidence Automation Pipelines</li>
+                            <li>• Data-Flow Diagram Mapping</li>
                         </ul>
                     </div>
 
+                    <!-- Column 3 -->
                     <div class="bg-slate-900/40 border border-slate-800/80 p-6 rounded-xl hover:border-slate-700 transition">
-                        <div class="text-sky-400 text-xl mb-3"><i class="fa-solid fa-network-wired"></i></div>
-                        <h3 class="font-mono font-bold text-sm text-white mb-3">Data Infra & Visibility</h3>
+                        <div class="text-emerald-400 text-xl mb-3"><i class="fa-solid fa-code"></i></div>
+                        <h3 class="font-mono font-bold text-sm text-white mb-3">Software & Backend</h3>
                         <ul class="space-y-2 font-mono text-xs text-slate-400">
-                            <li>• SQL (PostgreSQL, CockroachDB)</li>
-                            <li>• Splunk SIEM Core Monitoring</li>
-                            <li>• Apache Kafka & Redis Pipelines</li>
-                            <li>• Hadoop & Cassandra Auditing</li>
-                            <li>• Data-Flow Diagram Graphing</li>
-                            <li>• System Dependency Tracing</li>
+                            <li>• Java (Spring Boot REST APIs)</li>
+                            <li>• Python (Automation, Data Scripts)</li>
+                            <li>• Microservices & Design Patterns</li>
+                            <li>• PostgreSQL, CockroachDB, SQL</li>
+                            <li>• Cassandra & Hadoop Auditing</li>
+                            <li>• Git, CI/CD, Agile / SDLC</li>
                         </ul>
                     </div>
 
+                    <!-- Column 4 -->
                     <div class="bg-slate-900/40 border border-slate-800/80 p-6 rounded-xl hover:border-slate-700 transition">
-                        <div class="text-purple-400 text-xl mb-3"><i class="fa-solid fa-code"></i></div>
-                        <h3 class="font-mono font-bold text-sm text-white mb-3">Languages & Automation</h3>
+                        <div class="text-purple-400 text-xl mb-3"><i class="fa-solid fa-brain"></i></div>
+                        <h3 class="font-mono font-bold text-sm text-white mb-3">Data Analytics, Cloud & AI</h3>
                         <ul class="space-y-2 font-mono text-xs text-slate-400">
-                            <li>• Python (REST APIs, Data Scripts)</li>
-                            <li>• Java (Secure Spring Boot APIs)</li>
-                            <li>• Power Automate & JotForm Flow</li>
+                            <li>• Scikit-learn, Pandas, TF-IDF</li>
+                            <li>• Anomaly & Fraud Detection</li>
                             <li>• Power BI Executive Dashboards</li>
-                            <li>• PowerShell & Bash Scripting</li>
-                            <li>• Jira & Confluence Control Tasks</li>
-                        </ul>
-                    </div>
-
-                    <div class="bg-slate-900/40 border border-slate-800/80 p-6 rounded-xl hover:border-slate-700 transition">
-                        <div class="text-amber-400 text-xl mb-3"><i class="fa-solid fa-brain"></i></div>
-                        <h3 class="font-mono font-bold text-sm text-white mb-3">AI & Emerging Tech</h3>
-                        <ul class="space-y-2 font-mono text-xs text-slate-400">
-                            <li>• Custom AI Agents & Prompts</li>
-                            <li>• RAG Pipelines & Tooling</li>
-                            <li>• LLaMA Model Integration</li>
-                            <li>• Neo4j Vector Databases</li>
-                            <li>• Azure Database Infrastructure</li>
-                            <li>• Scikit-Learn Classifiers</li>
+                            <li>• Azure Cloud Infrastructure</li>
+                            <li>• RAG Pipelines & Neo4j Vector Stores</li>
+                            <li>• Power Automate Workflows</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
+            <!-- 03. EXPERIENCE -->
             <section id="experience" class="scroll-mt-20">
                 <div class="flex items-center gap-3 font-mono text-xs text-teal-400 mb-2 uppercase tracking-widest">
-                    <span>03</span> <span class="h-px bg-teal-500/30 flex-grow"></span> <span>RISK & GOVERNANCE CHRONOLOGY</span>
+                    <span>03</span> <span class="h-px bg-teal-500/30 flex-grow"></span> <span>ENGINEERING & GOVERNANCE CHRONOLOGY</span>
                 </div>
                 <h2 class="text-2xl font-bold text-white font-mono mb-8">Workplace History</h2>
 
                 <div class="space-y-8">
+                    <!-- RF SUNY -->
                     <div class="bg-slate-900/40 border border-slate-800 p-8 rounded-2xl relative hover:border-slate-700 transition">
                         <div class="flex flex-wrap justify-between items-start gap-4 mb-4">
                             <div>
-                                <span class="bg-teal-500/10 text-teal-400 font-mono text-[10px] px-2.5 py-1 rounded border border-teal-500/20 uppercase">RISK GOVERNANCE & ACADEMIC INITIATIVE</span>
+                                <span class="bg-teal-500/10 text-teal-400 font-mono text-[10px] px-2.5 py-1 rounded border border-teal-500/20 uppercase">AUTOMATION, CLOUD SEC & GRC INITIATIVES</span>
                                 <h3 class="text-xl font-bold text-white font-mono mt-2">Research Project Assistant</h3>
                                 <p class="text-xs font-mono text-slate-400">The Research Foundation for State University of New York (RF SUNY)</p>
                             </div>
@@ -191,9 +207,9 @@ def home():
 
                         <ul class="space-y-3 text-xs text-slate-300 font-mono mb-6 leading-relaxed">
                             <li class="flex items-start gap-2.5"><span class="text-teal-400 font-bold">&gt;</span> <span><strong>Compliance Evidence Automation:</strong> Architected an automated institutional intake and compliance evaluation platform utilizing custom JotForm conditional logic and Microsoft Power Automate pipelines, shrinking manual workflow execution latency from 2 weeks down to under 24 hours while keeping strict process audit trails.</span></li>
-                            <li class="flex items-start gap-2.5"><span class="text-teal-400 font-bold">&gt;</span> <span><strong>Data-Flow Mapping & GRC:</strong> Documented internal controls and mapped comprehensive system dependency data-flows to verify how sensitive information crosses operational thresholds, highlighting policy and control gaps for proactive technical remediation.</span></li>
+                            <li class="flex items-start gap-2.5"><span class="text-teal-400 font-bold">&gt;</span> <span><strong>Data-Flow Mapping & Risk Mitigation:</strong> Documented internal controls and mapped comprehensive system dependency data-flows to verify how sensitive information crosses operational thresholds, highlighting policy and control gaps for proactive technical remediation.</span></li>
                             <li class="flex items-start gap-2.5"><span class="text-teal-400 font-bold">&gt;</span> <span><strong>Executive Risk Dashboards:</strong> Constructed interactive Power BI analytics platforms to trace data governance metrics, digitize outdated ingestion structures, and establish structured, audit-ready operational records.</span></li>
-                            <li class="flex items-start gap-2.5"><span class="text-teal-400 font-bold">&gt;</span> <span><strong>AI Platform Support (GrantsMate App):</strong> Maintained system infrastructure support for the specialized GrantsMate tool, handling environments leveraging Retrieval-Augmented Generation (RAG) loops, LLaMA model integration, Neo4j vector maps, and secure Azure cloud stores.</span></li>
+                            <li class="flex items-start gap-2.5"><span class="text-teal-400 font-bold">&gt;</span> <span><strong>Cloud Infrastructure & AI Platform Support:</strong> Maintained system infrastructure support for the specialized GrantsMate tool, managing environments leveraging Retrieval-Augmented Generation (RAG) loops, LLaMA model integration, Neo4j vector maps, and secure Azure cloud stores.</span></li>
                         </ul>
 
                         <div class="bg-amber-500/5 border border-amber-500/20 p-3.5 rounded-xl flex items-center gap-3 text-xs font-mono text-amber-300">
@@ -202,10 +218,11 @@ def home():
                         </div>
                     </div>
 
+                    <!-- Bank of America -->
                     <div class="bg-slate-900/40 border border-slate-800 p-8 rounded-2xl relative hover:border-slate-700 transition">
                         <div class="flex flex-wrap justify-between items-start gap-4 mb-4">
                             <div>
-                                <span class="bg-sky-500/10 text-sky-400 font-mono text-[10px] px-2.5 py-1 rounded border border-sky-500/20 uppercase">ENTERPRISE FINANCIAL SYSTEMS</span>
+                                <span class="bg-sky-500/10 text-sky-400 font-mono text-[10px] px-2.5 py-1 rounded border border-sky-500/20 uppercase">ENTERPRISE FINANCIAL SYSTEMS & IAM ENGINEERING</span>
                                 <h3 class="text-xl font-bold text-white font-mono mt-2">Former Software Engineer - 1B</h3>
                                 <p class="text-xs font-mono text-slate-400">Bank of America — Global Organization & Modernization Tech (GOMT) / GTS Team</p>
                             </div>
@@ -214,10 +231,10 @@ def home():
 
                         <ul class="space-y-3 text-xs text-slate-300 font-mono mb-6 leading-relaxed">
                             <li class="flex items-start gap-2.5"><span class="text-sky-400 font-bold">&gt;</span> <span><strong>Access Control Governance (IAM):</strong> Configured real-time OAuth 2.0 authentication configurations and managed access isolation metrics, engineering secure, dynamic cryptographic certificate-swap mechanisms to reduce identity expiration vulnerability windows.</span></li>
-                            <li class="flex items-start gap-2.5"><span class="text-sky-400 font-bold">&gt;</span> <span><strong>Data Integrity Auditing & Migration:</strong> Co-developed a specialized dependency-verification tool for a large-scale Next-Gen Platform Migration using Spring Boot, evaluation cross-team architecture patterns to maintain 98% tracking accuracy.</span></li>
+                            <li class="flex items-start gap-2.5"><span class="text-sky-400 font-bold">&gt;</span> <span><strong>Backend Service Development:</strong> Engineered high-availability Java Spring Boot RESTful microservices processing large volumes of enterprise transaction data with strict fault tolerance and data validation requirements.</span></li>
+                            <li class="flex items-start gap-2.5"><span class="text-sky-400 font-bold">&gt;</span> <span><strong>Data Integrity Auditing & Migration:</strong> Co-developed a specialized dependency-verification tool for a large-scale Next-Gen Platform Migration using Spring Boot, evaluating cross-team architecture patterns to maintain 98% tracking accuracy.</span></li>
                             <li class="flex items-start gap-2.5"><span class="text-sky-400 font-bold">&gt;</span> <span><strong>Distributed Ledger Control Verification:</strong> Programmed validation scripts that systematically reduced database exception rates in CockroachDB (CRDB) and managed telemetry tracking logic across Cassandra and Hadoop historical transaction data stores.</span></li>
                             <li class="flex items-start gap-2.5"><span class="text-sky-400 font-bold">&gt;</span> <span><strong>Continuous Observability Audits:</strong> Formulated tailored Splunk SIEM dashboards to track system operational anomalies, establish alerts for unmapped errors, and preserve deterministic tracking data trails for root-cause analysis.</span></li>
-                            <li class="flex items-start gap-2.5"><span class="text-sky-400 font-bold">&gt;</span> <span><strong>Agile Controls:</strong> Monitored code defects, policy adjustments, and secure software development lifecycles (SSDLC) items across multi-time-zone development pods via Jira and Confluence tracking.</span></li>
                         </ul>
 
                         <div class="bg-amber-500/5 border border-amber-500/20 p-3.5 rounded-xl flex flex-wrap items-center gap-6 text-xs font-mono text-amber-300">
@@ -229,41 +246,73 @@ def home():
                 </div>
             </section>
 
+            <!-- 04. PROJECTS -->
             <section id="projects" class="scroll-mt-20">
                 <div class="flex items-center gap-3 font-mono text-xs text-teal-400 mb-2 uppercase tracking-widest">
-                    <span>04</span> <span class="h-px bg-teal-500/30 flex-grow"></span> <span>FORENSIC AUDIT & RISK PROJECTS</span>
+                    <span>04</span> <span class="h-px bg-teal-500/30 flex-grow"></span> <span>FEATURED TECHNICAL PROJECTS</span>
                 </div>
-                <h2 class="text-2xl font-bold text-white font-mono mb-8">Forensic & Security Projects</h2>
+                <h2 class="text-2xl font-bold text-white font-mono mb-8">Projects Highlighting Full Skill Spectrum</h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Project 1 -->
                     <div class="bg-slate-900/40 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-slate-700 transition">
                         <div>
-                            <span class="font-mono text-[10px] uppercase text-teal-400 bg-teal-500/10 px-2.5 py-1 rounded border border-teal-500/20 tracking-wider">RISK AUDITING // MACHINE LEARNING</span>
-                            <h3 class="font-bold text-white font-mono text-base mt-4">Enron Email Behavioral Insider Threat Pipeline</h3>
+                            <span class="font-mono text-[10px] uppercase text-teal-400 bg-teal-500/10 px-2.5 py-1 rounded border border-teal-500/20 tracking-wider">RISK ANALYTICS // SPAM DETECTION // ML</span>
+                            <h3 class="font-bold text-white font-mono text-base mt-4">SMS Spam Detection & Automated Classification Pipeline</h3>
                             <p class="text-slate-400 text-xs mt-3 leading-relaxed font-mono">
-                                Modeled compliance risks and unauthorized insider activities across expansive text corpora. Engineered an end-to-end data processing infrastructure using Python to run sentiment profiling, TF-IDF vectorization, and language clustering, applying a Scikit-Learn Logistic Regression engine to automatically flag communication anomalies and security policy boundary violations.
+                                Engineered an end-to-end machine learning pipeline to identify and classify spam behavior across 5,000+ SMS messages using TF-IDF vectorization. Evaluated Logistic Regression, Random Forest, and Naive Bayes models using precision, recall, F1-score, and confusion matrices to assess false-positive tradeoffs for fraud prevention systems.
                             </p>
                         </div>
                         <div class="mt-6 pt-4 border-t border-slate-800/80 font-mono text-[11px] text-slate-500">
-                            Tools: Python, Scikit-learn, TF-IDF, NLP, Triage Analytics
+                            Highlights: Python, Pandas, Scikit-learn, TF-IDF, Fraud & Anomaly Analytics
                         </div>
                     </div>
 
+                    <!-- Project 2 -->
                     <div class="bg-slate-900/40 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-slate-700 transition">
                         <div>
-                            <span class="font-mono text-[10px] uppercase text-purple-400 bg-purple-500/10 px-2.5 py-1 rounded border border-purple-500/20 tracking-wider">NETWORK FORENSICS // AUDIT RECONSTRUCTION</span>
-                            <h3 class="font-bold text-white font-mono text-base mt-4">Apex Financial Web Server Breach Investigation</h3>
+                            <span class="font-mono text-[10px] uppercase text-sky-400 bg-sky-500/10 px-2.5 py-1 rounded border border-sky-500/20 tracking-wider">BEHAVIORAL ANALYTICS // INSIDER THREAT</span>
+                            <h3 class="font-bold text-white font-mono text-base mt-4">Enron Email Behavioral Analysis & Insider Threat Pipeline</h3>
                             <p class="text-slate-400 text-xs mt-3 leading-relaxed font-mono">
-                                Reconstructed an adversarial perimeter exploit sequence to form an audit-ready event mitigation review. Captured and analyzed malicious transaction payloads via deep packet tracking in Wireshark, aggregating host event logs into automated Splunk SIEM tracking dashboards to establish a verifiable evidence timeline.
+                                Engineered a Python-based behavioral analytics engine for large unstructured communication datasets. Applied feature engineering, sentiment analysis, TF-IDF vectorization, time-based clustering, and Logistic Regression to translate behavioral signals into measurable risk indicators and isolate policy violations or insider threats.
                             </p>
                         </div>
                         <div class="mt-6 pt-4 border-t border-slate-800/80 font-mono text-[11px] text-slate-500">
-                            Tools: Wireshark, Splunk SIEM, PCAP Parsing, Evidence Control
+                            Highlights: NLP, Behavioral Analytics, Risk Classification, Clustering, Data Pipelines
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bg-slate-900/40 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-slate-700 transition">
+                        <div>
+                            <span class="font-mono text-[10px] uppercase text-purple-400 bg-purple-500/10 px-2.5 py-1 rounded border border-purple-500/20 tracking-wider">NETWORK FORENSICS // FINANCIAL SECURITY</span>
+                            <h3 class="font-bold text-white font-mono text-base mt-4">Apex Financial Web Server Breach Investigation</h3>
+                            <p class="text-slate-400 text-xs mt-3 leading-relaxed font-mono">
+                                Reconstructed a simulated financial web server breach by analyzing malicious network traffic, host logs, and attack artifacts. Executed PCAP analysis in Wireshark and correlated security events in Splunk SIEM to trace credential-harvesting behavior, establish an evidence-based incident timeline, and formulate security remediation controls.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800/80 font-mono text-[11px] text-slate-500">
+                            Highlights: Wireshark, Splunk SIEM, PCAP Traffic Parsing, Forensics, Root-Cause Analysis
+                        </div>
+                    </div>
+
+                    <!-- Project 4 (New: Generative AI, Cloud & API Security) -->
+                    <div class="bg-slate-900/40 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-slate-700 transition">
+                        <div>
+                            <span class="font-mono text-[10px] uppercase text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded border border-amber-500/20 tracking-wider">CLOUD SEC // AI PIPELINES // SOFTWARE ENG</span>
+                            <h3 class="font-bold text-white font-mono text-base mt-4">Generative AI Platform Infrastructure & RAG Tooling (GrantsMate)</h3>
+                            <p class="text-slate-400 text-xs mt-3 leading-relaxed font-mono">
+                                Implemented backend infrastructure and cloud data-security controls supporting AI agents with Retrieval-Augmented Generation (RAG). Integrated Neo4j vector maps, LLaMA model pipelines, and secure Azure data stores while managing API endpoints, access boundary checks, and operational monitoring.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-800/80 font-mono text-[11px] text-slate-500">
+                            Highlights: Azure Cloud, Java/Python APIs, Neo4j, LLM Security, RAG Architecture
                         </div>
                     </div>
                 </div>
             </section>
 
+            <!-- 05. ENDORSEMENTS -->
             <section id="endorsements" class="scroll-mt-20">
                 <div class="flex items-center gap-3 font-mono text-xs text-teal-400 mb-2 uppercase tracking-widest">
                     <span>05</span> <span class="h-px bg-teal-500/30 flex-grow"></span> <span>VERIFIED REVIEWS</span>
@@ -306,7 +355,7 @@ def home():
         </main>
 
         <footer class="bg-slate-950 text-slate-600 text-[11px] font-mono py-8 text-center border-t border-slate-900 mt-20">
-            <p>© 2026 PRAGATHI_SRINIVASAN // TACTICAL GRC & SECURITY COMMAND PORTFOLIO</p>
+            <p>© 2026 PRAGATHI_SRINIVASAN</p>
         </footer>
 
     </body>
