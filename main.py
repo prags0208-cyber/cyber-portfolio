@@ -82,7 +82,6 @@ def home():
                 <div class="flex items-center gap-3 font-mono text-xs text-teal-400 mb-2 uppercase tracking-widest">
                     <span>01</span> <span class="h-px bg-teal-500/30 flex-grow"></span> <span>PROFILE & OBJECTIVE</span>
                 </div>
-                <h2 class="text-2xl font-bold text-white font-mono mb-6">Unifying Software Engineering, Security Engineering, Tech GRC & Data Analytics</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="md:col-span-2 bg-slate-900/40 border border-slate-800 p-8 rounded-2xl relative">
